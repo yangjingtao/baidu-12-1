@@ -1,0 +1,437 @@
+/*
+弹性布局（弹性盒模型）
+*/
+body,html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin:0;
+    overflow: hidden;
+}
+*{
+    padding: 0;margin: 0;
+}
+
+header{
+    width: 100%;
+    background: #168BD8;
+    height: 60px;
+    position: fixed;
+    top: 0;left: 0;
+    z-index: 999;
+}
+.header{
+    width: 1000px;
+    height: 100%;
+    margin: auto;
+    display: none;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+}
+.header a{
+    color: #fff;
+    text-decoration: none;
+    font-family: "Microsoft YaHei UI";
+}
+.header .logo{
+    display: block;
+    width: 120px;
+    height: 100%;
+    background: url("../images/header.png")no-repeat 0 10px;
+    float: left;
+}
+.header #index{
+    height: 100%;
+    float: left;
+    margin-left: 60px;
+}
+.header #index a{
+    padding: 0 15px;
+    line-height: 75px;
+}
+.header #index a:first-child{
+    font-size: 14px;
+}
+.header #last{
+    height: 100%;
+    float: right;
+}
+.header #last a{
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 80px;
+}
+.header #last a:nth-child(4){
+    color: #FFDA28;
+    padding-right: 0;
+}
+
+
+/*content*/
+#fullpage{
+    width: 100%;
+    height:100%;
+    transition: margin-top 2s ease ;
+}
+#fullpage section{
+    width: 100%;
+    height: 100%;
+}
+#fullpage section:nth-child(1){
+     background: url("../images/bg-0.jpg") ;
+    background-size: cover;
+    position: relative;
+ }
+#fullpage section:nth-child(2){
+    margin-top: -100px;
+    position: relative;
+    background: url("../images/bg-1.jpg") ;
+}
+#fullpage section:nth-child(3){
+    position: relative;
+    background: url("../images/bg-2.jpg") ;
+}
+#fullpage section:nth-child(4){
+    /*margin-top: -100px;*/
+    position: relative;
+    background: url("../images/bg-3.jpg") ;
+}
+
+.center{
+    width: 1000px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+.cloud{
+    width: 200%;
+    height: 100%;
+    position: absolute;left: 0;top: 0;
+    animation: air 10s linear infinite;
+}
+.cloud .one-cloud{
+    width: 50%;
+    height: 100%;
+    background:url("../images/cloud.png") 0 -200px;
+    float: left;
+    background-size: cover;
+}
+.cloud .two-cloud{
+    width: 50%;
+    height: 100%;
+    background:url("../images/cloud.png");
+    background-position: bottom;
+    background-size: cover;
+    float: left;
+}
+
+@keyframes  air{
+    0%{
+        transform: translate(0,0);
+    }
+    100%{
+        transform: translate(-50%,0);
+    }
+}
+.text-one{
+    width:501px;
+    height: 158px;
+    margin-top: 120px;
+    float: left;
+    background: url("../images/launch_1.png");
+}
+.flight{
+    width: 119px;
+    height: 78px;
+    float: right;
+    margin-right: 70px;
+    background: url("../images/flight_1.png");
+    animation: flight 3s ease infinite;
+}
+@keyframes flight {
+    0%{
+        margin-top: 0px;
+    }
+    40%{
+        margin-top: -10px;
+    }
+    80%{
+        margin-top: 10px;
+    }
+    100%{
+        margin-top: 0px;
+    }
+}
+.login{
+    width: 340px;
+    height: 300px;
+    background: #4ebffc;
+    float: right;
+    border-radius: 5px;
+    margin-top: 120px;
+}
+.login-info{
+    padding-top:20px ;
+}
+.login-info p{
+    height: 20px;
+}
+.user-box{
+    width: 299px;
+    height: 40px;
+    background: #fff;
+    margin: auto;
+}
+.user-box span{
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin: 13px 10px 0 10px;
+    background: url("../images/icons.png")no-repeat -124px -12px;
+}
+.user-box input{
+    border: 0;
+    height: 100%;
+    width:80%;
+    float: left;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.pass-box{
+    width: 299px;
+    height: 40px;
+    background: #fff;
+    margin: auto;
+}
+.pass-box span{
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin: 13px 10px 0 10px;
+    background: url("../images/icons.png")no-repeat -124px -12px;
+}
+.pass-box input{
+    border: 0;
+    height: 100%;
+    width:80%;
+    float: left;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+.reg-info{
+    width: 299px;
+    height: 40px;
+    margin: auto;
+}
+.reg-info input{
+    float: left;
+    width: 122px;
+    height: 20px;
+    border: 0;
+    padding: 10px;
+    color: darkorange;
+}
+.reg-info img{
+    float: left;
+    width: 80px;
+    height: 40px;
+    margin-left: 20px;
+}
+.reg-info a{
+    float: left;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+.sub-box{
+    width: 299px;
+    height: 40px;
+    margin: auto;
+}
+.sub-box input{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    background: #FFD850;
+    border: 0;border-radius: 3px;
+}
+.error{
+    width: 299px;
+    margin: auto;
+    padding-top: 20px;
+}
+.error-act{
+    float: left;
+}
+.error-act span{
+    float: left;
+    width: 14px;
+    height: 14px;
+    /*padding: 9px;*/
+    padding-left: 0;
+    margin-right: 10px;
+    background: url("../images/icons.png")no-repeat -204px -74px;
+}
+.error-act a{
+    float: left;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+.error .forget{
+    float: right;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*2*/
+.second-up{
+    width: 1000px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+.second-up .left-up{
+    width: 265px;
+    height: 175px;
+    background: url("../images/hill_1.png");
+    position: absolute;
+    left: -15%;top: -50px;
+}
+.second-up .left-up2{
+    width: 63px;
+    height: 78px;
+    background: url("../images/hill_2.png");
+    position: absolute;
+    right: 50%;top: -13px;
+}
+.second-up .left-up3{
+    width: 265px;
+    height: 175px;
+    background: url("../images/hill_3.png");
+    position: absolute;
+    right: -10%;top: -50px;
+}
+.second-up .up-capt{
+    width: 242px;
+    height: 228px;
+    background: url("../images/ship_1.png");
+    position: absolute;
+    left: 100px;
+    top: -190px;
+}
+
+
+.sleft-text-box img{
+    width: 66px;
+    height: 123px;
+    float: left;
+}
+.sleft-text-box .text-con{
+    width: 414px;
+    height: 118px;
+    float: left;
+    padding-left: 20px;
+}
+.text-con h2{
+    font-size: 40px;
+    font-family: "Microsoft YaHei UI";
+    color: #fff;
+    line-height: 60px;
+}
+.text-con h3{
+    line-height: 30px;
+    font-size: 20px;
+    font-family: "Microsoft YaHei UI";
+    color: #fff;
+}
+
+/*3*/
+.three-up{
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    position: relative;
+}
+.three-up .squire1{
+    width: 44px;
+    height: 44px;
+    background: #35b568;
+    position: absolute;
+    left:77px;top: -44px;
+}
+.three-up .squire2{
+    width: 88px;
+    height: 88px;
+    background: #35b568;
+    position: absolute;
+    left:158px;top: -88px;
+}
+.three-up .squire3{
+    width: 44px;
+    height: 44px;
+    background: #8ae75a;
+    position: absolute;
+    left:246px;top: -44px;
+}
+.three-up .squire4{
+     width: 44px;
+     height: 44px;
+     background: #8ae75a;
+     position: absolute;
+     right:328px;top: -44px;
+ }
+.three-up .squire5{
+    width: 44px;
+    height: 44px;
+    background: #35b568;
+    position: absolute;
+    right:240px;top: -44px;
+}
+
+
+.img-rotate{
+    animation: rao 2s ease infinite;
+}
+
+@keyframes rao {
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.follw-t-header{
+    width: 100%;
+    height: 20%;
+    background: url("../images/bg-arc.png");
+    position: absolute;
+    left: 0;top: -20%;
+}
+
+.floor{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    left: 0;right: 0;bottom: 40px;
+    margin: auto;
+    animation: floor 1s linear infinite;
+}
+@keyframes floor {
+    0%{transform: translate(0,0px)}
+    50%{transform: translate(0,10px)}
+    100%{transform: translate(0,0px)}
+}
+
+

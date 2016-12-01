@@ -1,0 +1,230 @@
+
+.min-header{
+    width: 100%;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (min-width:1000px){
+    .header{
+        display: block;
+    }
+    .min-header{
+        display: none;
+    }
+    .second-center .tright-text-box{
+        width: 444px;
+        height: 427px;
+        background: url("../images/allside_3.png")no-repeat;
+        float: right;
+    }
+    .second-center{
+        width: 1000px;
+        height: auto;
+        position: absolute;
+        left: 0;top: 100px;right: 0;
+        margin: auto;
+    }
+    .second-center .sright-text-box{
+        width: 444px;
+        height: 427px;
+        background: url("../images/brain_2.png");
+        float: right;
+        margin-top: 100px;
+    }
+    .four-center{
+        width: 1000px;
+        height: auto;
+        position: absolute;
+        left: 0;top: 100px;right: 0;
+        margin: auto;
+    }
+    .four-center .sleft-text-box{
+        width:500px;
+        height: 300px;
+        float: left;
+        background: url("../images/bubble.png")no-repeat;
+    }
+
+    .second-center .sleft-text-box{
+        width:500px;
+        height: 126px;
+        float: left;
+
+    }
+
+    .second-center .tright-text-box{
+        width: 500px;
+        height: 427px;
+        background: url("../images/allside_3.png")no-repeat;
+        float: right;
+    }
+    .four-center{
+        width: 1000px;
+        height: auto;
+        margin: auto;
+        position: relative;
+    }
+    .second-center .fright-text-box{
+        width: 444px;
+        height: 427px;
+        background: url("../images/stat_4.png")no-repeat;
+        position: absolute;right: 0;top: 0px;
+    }
+    .four-center .sleft-text-box{
+        margin-top: 150px;
+    }
+
+    .second-center .sleft-text-box{
+        margin-top: 200px;
+    }
+}
+.min-header .min-logo{
+    display: block;
+    width: 120px;
+    height: 100%;
+    background: url("../images/header.png")no-repeat 0 10px;
+    margin-left: 15px;
+}
+
+.nav-menu{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.nav-menu .menu{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    margin-top: 15px;
+    float: right;
+    position:relative;
+}
+.nav-menu .menu .menu-tline{
+    position: absolute;
+    left: 0;top: 10px;
+    width: 100%;height: 2px;background: #fff;
+    transition: transform 1s ease;
+}
+.nav-menu .menu .menu-bline{
+    position: absolute;
+    left: 0;top: 20px;
+    width: 100%;height: 2px;background: #fff;
+    transition: transform 1s ease;
+}
+
+
+.nav-menu .scene{
+    width: 100%;height: 100%;
+    position: absolute;left: 0;top: 60px;
+    perspective: 500px;
+}
+.nav-menu .scene .menu-option{
+    width: 100%;
+    height: auto;
+    transform-style: preserve-3d;
+}
+.nav-menu .scene .menu-option a{
+    display: block;
+    width: 100%;height: 40px;
+    text-align: center;line-height: 40px;
+    background: #000;color: #fff;text-decoration: none;
+    border-bottom: 1px solid #ccc;
+    transform-origin: top;
+    opacity: 0;
+}
+
+@keyframes menu {
+    0%{transform: rotateX(90deg);opacity: 0}
+    100%{transform: rotateX(0deg);opacity: 1}
+}
+@keyframes menu1 {
+    0%{transform: rotateX(0deg);opacity: 1}
+    100%{transform: rotateX(-90deg);opacity: 0}
+}
+
+@media screen and (max-width: 1000px){
+    .center{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .text-one{
+        display: none;
+    }
+    .login{
+        position: absolute;left: 0;right: 0;top: 0;bottom: 0;
+        margin: auto;
+    }
+    .up-capt{
+        display: none;
+    }
+    .second-center{
+        width: 100%;
+        height: 100%;
+    }
+    .second-center .sleft-text-box{
+        width:500px;
+        height: 126px;
+        position: absolute;
+        left: 0;right: 0;top: 0;bottom: 0;margin: auto;
+    }
+    .second-center .sright-text-box{
+        display: none;
+    }
+
+    .four-center{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .four-center .sleft-text-box{
+        position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;
+    }
+    .four-center .fright-text-box{
+        display: none;
+    }
+}
+
+@keyframes img-lslide {
+    0%{
+        transform: translate(-100px,0);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+@keyframes img-rslide {
+    0%{
+        transform: translate(100px,0);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+@keyframes img1-lslide {
+    0%{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    100%{
+
+        transform: translate(-100px,0);
+        opacity: 0;
+    }
+}
+@keyframes img1-rslide {
+    0%{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    100%{
+
+        transform: translate(100px,0);
+        opacity: 0;
+    }
+}
